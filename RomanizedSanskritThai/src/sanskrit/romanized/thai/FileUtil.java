@@ -7,6 +7,8 @@ package sanskrit.romanized.thai;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -21,7 +23,7 @@ public class FileUtil {
         //Get file from resources folder
         ClassLoader classLoader = getClass().getClassLoader();
         File file = new File(classLoader.getResource(fileName).getFile());
-        try (Scanner scanner = new Scanner(file)) {
+        try (Scanner scanner = new Scanner(file,"UTF-8")) {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 result.append(line).append("\n");
@@ -32,6 +34,25 @@ public class FileUtil {
         }
 
         return result.toString();
+    }
+    
+    public List<String> getListLine(String fileName) {
+
+        List<String> result = new ArrayList<>();
+        //Get file from resources folder
+        ClassLoader classLoader = getClass().getClassLoader();
+        File file = new File(classLoader.getResource(fileName).getFile());
+        try (Scanner scanner = new Scanner(file,"UTF-8")) {
+            while (scanner.hasNextLine()) {
+                String line = scanner.nextLine();
+                result.add(line);
+            }
+            scanner.close();
+        } catch (IOException e) {
+
+        }
+
+        return result;
     }
 
 }
