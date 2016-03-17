@@ -14,7 +14,7 @@ public class RomanizedSanskritThai {
         //String romaSanskritTxt = fileUtil.getFile("sample.txt");
 
         ThaiCharacterRule rule = new ThaiCharacterRule();
-        List<String> listLine = fileUtil.getListLine("Bodhisattva.txt");
+        List<String> listLine = fileUtil.getListLine("sample.txt");
         List<String> listLineThai = new ArrayList<>();
         for (String line : listLine) {
             line = line.toLowerCase();

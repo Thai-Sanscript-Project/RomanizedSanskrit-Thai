@@ -116,6 +116,7 @@ public class MappingCharacter {
         mapping.put("ph", "ผ");
 
         mapping.put("n̄", "ญ");
+//         mapping.put("ar", "รฺ");
 
         mapping.put("gh", "ฆ");
         mapping.put("jh", "ฌ");

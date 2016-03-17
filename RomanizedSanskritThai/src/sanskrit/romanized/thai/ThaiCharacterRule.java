@@ -97,7 +97,8 @@ public class ThaiCharacterRule {
                     if (i > 0) {
                         boolean check1 = !isThaiConsonant(charList.get(i - 1));
                         boolean check2 = charList.get(i).equals(key);
-                        if (check1 && check2) {
+                        boolean check3 = !charList.get(i).equals("เ") && !charList.get(i).equals("า") ;
+                        if (check1 && check2 && check3) {
                             charList.set(i, value);
                         }
                     }
@@ -140,6 +141,8 @@ public class ThaiCharacterRule {
                 if (isThaiConsonant(afterA1) && !isThaiConsonant(afterA2) && !isThaiVowel(afterA2) && !afterA2.equals("ฺ")) {
                     charList.set(i, "ั");
                 }
+                
+             
 
             }
         }

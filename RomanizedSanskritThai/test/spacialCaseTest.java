@@ -25,28 +25,38 @@ public class spacialCaseTest {
 
     }
 
-//    @Test
-//    public void test1() {
-//        convertTest("uddānam", "อุททานัม");
-//        convertTest("-uddānam", "-อุททานัม");
-//        convertTest("uddānam-uddānam", "อุททานัม-อุททานัม");
-//    }
-//
-//    @Test
-//    public void test2() {
-//        convertTest("na-an", "นะ-อัน");
-//        convertTest("naan", "นะอัน");    
-//    }
-//    
-//    @Test
-//    public void test3() {     
-//        convertTest("bījagrāmabhūtagrāma", "พีชะครามะภูตะครามะ");    
-//    }
-//    
+    @Test
+    public void test1() {
+        convertTest("uddānam", "อุททานัม");
+        convertTest("-uddānam", "-อุททานัม");
+        convertTest("uddānam-uddānam", "อุททานัม-อุททานัม");
+    }
+
+    @Test
+    public void test2() {
+        convertTest("na-an", "นะ-อัน");
+        convertTest("naan", "นะอัน");    
+    }
+    
+    @Test
+    public void test3() {     
+        convertTest("bījagrāmabhūtagrāma", "พีชะครามะภูตะครามะ");    
+    }
+    
     @Test
     public void test4() {     
         convertTest("namaḥ", "นะมะหฺ");
         convertTest("trayaḥ", "ตระยะหฺ");
+    }
+     @Test
+    public void test5() {     
+        convertTest("daurvvalyamanāviṣkṛtvā", "เทารววัลยะมะนาวิษกฤตวา");
+       
+    }
+     @Test
+    public void test6() {     
+        convertTest("maitreya", "ไมเตรยะ");
+       
     }
 
     public static void convertTest(String param, String expected) {
